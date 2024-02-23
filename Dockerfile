@@ -41,7 +41,7 @@ USER fenacap:fenacap
 WORKDIR /deploy
 
 # Expõe as portas das aplicações
-EXPOSE 8081 8082 8083
+EXPOSE 8081 8082 4200
 
 # Ponto de entrada usando o Supervisord para coordenar a execução de múltiplos processos
 CMD ["supervisord", "-c", "/conf/supervisor.conf"]

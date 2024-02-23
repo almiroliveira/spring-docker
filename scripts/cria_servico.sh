@@ -36,6 +36,7 @@ docker service create \
 --host mail.cnseg.org.br:10.1.4.72 \
 --publish mode=host,target=8080,published=8080,protocol=tcp \
 --publish mode=host,target=8081,published=8081,protocol=tcp \
+--publish mode=host,target=4200,published=4200,protocol=tcp \
 --mount type=bind,source=/Dockerfile/spring-docker/logs,target=/logs \
 ${IMAGEM}:${VERSAO}
 
