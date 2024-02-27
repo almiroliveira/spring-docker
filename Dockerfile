@@ -17,11 +17,6 @@ RUN ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
 RUN echo "America/Sao_Paulo" > /etc/timezone
 RUN dpkg-reconfigure -f noninteractive tzdata
 
-# Instala o Node, NPM e Angular
-#RUN apt-get install -y nodejs
-#RUN apt-get install -y npm
-#RUN npm install -g @angular/cli
-
 # Instala e configura o NGINX
 RUN apt-get install -y nginx
 COPY conf/front.conf /etc/nginx/sites-enabled/default
